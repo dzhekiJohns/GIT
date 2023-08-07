@@ -1,0 +1,64 @@
+
+Первая часть первого  ДЗ  ))
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я               pwd
+2) Создать папку                  mkdir terminal
+3) Зайти в папку                  cd terminal
+4) Создать 3 папки                     mkdir f1 f2 f3
+5) Зайти в любоую папку                  cd f2
+6) Создать 5 файлов (3 txt, 2 json)       cat > front.txt  cat > back.txt    cat > names.txt   vim > list.json    vim > file.json
+7) Создать 3 папки                           mkdir qa1 qa2 qa3
+8. Вывести список содержимого папки             ls -la
+9) + Открыть любой txt файл                         cat back.txt
+10) + написать туда что-нибудь, любой текст.       cat > back.txt   Good day for every people!
+                                                                    Have a nice day!
+                                                                    I wish you and me a lot of money!
+                                                                    QA sphere is a super sphere!
+                                                                    Warm sea is perfect!   
+11) + сохранить и выйти.                               ctrl + d
+12) Выйти из папки на уровень выше                       cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.      mv f2/back.txt f1/back.txt   mv f2/front.txt f1/front.txt
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.          cp f1/back.txt f3/back.txt    cp f1/front.txt f3/front.txt 
+15) Найти файл по имени                                                                   find / -name back.txt
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.        tail -f /d/terminal/f3/back.txt     
+17) вывести несколько первых строк из текстового файла                                          head -n2 front.txt
+18) вывести несколько последних строк из текстового файла                                         tail -n2 front.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.                 less front.txt
+20) вывести дату и время                                                                               date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+                                    curl http://162.55.220.72:5006/terminal-hw-request 
+                                    curl "http://162.55.220.72:5005/get_method?name=Evgeniy&age=37"    
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+cat >> script1.sh <<EOF
+#!/bin/bash
+cd terminal
+mkdir f1 f2 f3
+cd f2
+touch front.txt  back.txt  names.txt  list.json  file.json
+mkdir qa1 qa2 qa3
+ls -la
+mv back.txt front.txt ../f1
+EOF
+
+
+chmod +x ./script1.sh
+
+
+./script1.sh
+
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
+
+
+
+
+
+
